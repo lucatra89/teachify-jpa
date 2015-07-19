@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="TEACHIFY" transaction-type="JTA">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<jta-data-source>ora-teachify-ds</jta-data-source>
+		<class>it.univaq.disim.mwt.teachify.business.model.Hour</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.TypeOfEducation</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Group</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Location</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Contact</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Price</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.User</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Tutor</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Availability</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Feedback</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Lesson</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Request</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Subject</class>
+		<class>it.univaq.disim.mwt.teachify.business.TutorInfo</class>
+		<properties>
+			<property name="eclipselink.logging.level.sql" value="FINE"/>
+			<property name="eclipselink.logging.level.ddl" value="INFO"/>
+			<property name="eclipselink.application-location" value="/Users/lucatraini/Developer/EclipseProjects/teachify_ejb_test"/>
+		</properties>
+	</persistence-unit>
+	<persistence-unit name="TEACHIFY-LOCAL" transaction-type="RESOURCE_LOCAL" >
+		<class>it.univaq.disim.mwt.teachify.business.model.Hour</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.TypeOfEducation</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Group</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Location</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Contact</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Price</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.User</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Tutor</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Availability</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Feedback</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Lesson</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Request</class>
+		<class>it.univaq.disim.mwt.teachify.business.model.Subject</class>
+		<class>it.univaq.disim.mwt.teachify.business.TutorInfo</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+			<property name="javax.persistence.jdbc.url" value='jdbc:oracle:thin:@127.0.0.1:1521/orcl'/>
+			<property name="javax.persistence.jdbc.user" value="teachify_test"/>
+			<property name="javax.persistence.jdbc.password" value="teachify"/>
+			<property name="javax.persistence.schema-generation.scripts.action" value="drop-and-create"/>
+			<property name="eclipselink.logging.level.sql" value="FINE"/>
+			<property name="eclipselink.logging.level.ddl" value="FINE"/>
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+			<property name="eclipselink.ddl-generation.output-mode" value="sql-script"/>
+			<property name="eclipselink.application-location" value="/Users/lucatraini/Developer/EclipseProjects/teachify_jpa_test/ddl"/>
+			<property name="javax.persistence.schema-generation.database.action" value="none"/>
+			<property name="eclipselink.create-ddl-jdbc-file-name" value="createDDL.ddl"/>
+			<property name="eclipselink.drop-ddl-jdbc-file-name" value="dropDDL.ddl"/>
+			<property name="javax.persistence.schema-generation.create-database-schemas" value="true"/>
+		</properties>
+	</persistence-unit>
+</persistence>
